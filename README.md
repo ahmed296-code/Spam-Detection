@@ -5,8 +5,8 @@
 3.From the "File Browser" that is located on the left side of the top-left of the jupyter interface,
 navigate for "Implementation" Folder where all folders and files about the project their.
 
-4.When opening "Implementaion" Folder, navigate for "AFND.ipynb" (and navigate for "data.csv" which is the dataset to make sure the model execute on it)
-file where the python code is in it and Ready to run.
+4.When opening "Implementaion" Folder, navigate for "AFND.ipynb" file (and navigate for "data.csv" which is the dataset to make sure the model execute on it)
+where the python code is in it and Ready to run.
 
 5.Install necessary libraries to insure the program will run, you will find it in the first cell in the "AFND.ipynb" file,
 by selecting the first cell then click run button which is located in the toolbar slide.
