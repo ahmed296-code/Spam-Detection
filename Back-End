@@ -18,6 +18,8 @@ from nltk.corpus import wordnet
 from nltk import pos_tag
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import accuracy_score
+#----------------------------------------------------------------------------------------------
+
 
 
 #------------------------------------------------------------------------------------------->Text Preprocessing
@@ -84,11 +86,15 @@ def lemmatize_text(tokens):
 
 # Apply the lemmatization function to the dataframe
 df['text'] = df['text'].apply(lambda x: lemmatize_text(x) if isinstance(x, list) else x)
+#----------------------------------------------------------------------------------------------------------
+
 
 
 #---------------------------------------------------------------------------------------------------------->Splitting Dataset
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(df['text'], df['Label'], test_size=0.2, random_state=42)
+-----------------------------------------------------------------------------------------------------------
+
 
 
 #---------------------------------------------------------------------------------------------------------->TF-IDF Vectorizer
@@ -101,6 +107,8 @@ X_test_tfidf = tfidf.transform(X_test.astype('U'))
 
 # Save the tfidf vectorizer
 joblib.dump(tfidf, 'tfidf.pkl')
+#---------------------------------------------------------------------------------------------------------
+
 
 
 #------------------------------------------------------------------------------------------------------------>HyperParameters & XGBoost
@@ -217,3 +225,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=False)
+#--------------------------------------------------------------------------------------------------------
